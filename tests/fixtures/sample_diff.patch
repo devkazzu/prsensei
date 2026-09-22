@@ -1,1 +1,11 @@
-
+diff --git a/src/auth.py b/src/auth.py
+index 1234567..abcdefg 100644
+--- a/src/auth.py
++++ b/src/auth.py
+@@ -10,6 +10,8 @@ def login(username, password):
+     user = db.get_user(username)
++    if not user:
++        return None
+     if verify(password, user.hash):
+         return create_token(user)
+     return None
