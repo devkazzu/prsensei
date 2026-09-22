@@ -22,5 +22,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           llm_api_key: ${{ secrets.GROQ_API_KEY }}
           llm_provider: "groq"
-          model: "llama-3.3-70b-versatile"
+          model: "openai/gpt-oss-120b"
           max_files: 20
