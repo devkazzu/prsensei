@@ -1,1 +1,42 @@
+name: "PRSensei"
+description: "AI-powered pull request reviews using Groq or OpenAI"
+author: "PRSensei"
 
+branding:
+  icon: "eye"
+  color: "purple"
+
+inputs:
+  github_token:
+    description: "GitHub token for API access"
+    required: true
+  llm_api_key:
+    description: "API key for the LLM provider"
+    required: true
+  llm_provider:
+    description: "LLM provider: groq or openai"
+    required: false
+    default: "groq"
+  model:
+    description: "Model name to use"
+    required: false
+    default: "llama-3.3-70b-versatile"
+  max_files:
+    description: "Maximum number of files to review"
+    required: false
+    default: "20"
+  review_scope:
+    description: "Review scope: full or changed-only"
+    required: false
+    default: "changed-only"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  env:
+    INPUT_GITHUB_TOKEN: ${{ inputs.github_token }}
+    INPUT_LLM_API_KEY: ${{ inputs.llm_api_key }}
+    INPUT_LLM_PROVIDER: ${{ inputs.llm_provider }}
+    INPUT_MODEL: ${{ inputs.model }}
+    INPUT_MAX_FILES: ${{ inputs.max_files }}
+    INPUT_REVIEW_SCOPE: ${{ inputs.review_scope }}
