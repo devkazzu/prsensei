@@ -1,1 +1,12 @@
-
+{
+  "summary": "The PR adds a necessary null check but could benefit from a more descriptive error response.",
+  "comments": [
+    {
+      "file": "src/auth.py",
+      "line": 12,
+      "severity": "info",
+      "category": "logic",
+      "body": "Consider raising an explicit AuthError instead of returning None, so callers can distinguish 'user not found' from 'wrong password'."
+    }
+  ]
+}
