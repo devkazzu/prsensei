@@ -5,11 +5,11 @@ AI-powered pull request reviews, running entirely inside GitHub Actions.
 ## Quick Start
 
 1. Add your LLM API key as a repository secret (`GROQ_API_KEY` or `OPENAI_API_KEY`).
-2. Create `.github/workflows/pr-sensei.yml`:
+2. Create `.github/workflows/pr-sensei.yml`:mnbm
 
 ```yaml
 name: PRSensei
-on:
+on:b
   pull_request:
     types: [opened, synchronize, reopened]
 
