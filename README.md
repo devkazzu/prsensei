@@ -1,4 +1,4 @@
-     # 🧘 PRSensei
+# 🧘 PRSensei
 
 AI-powered pull request reviews, running entirely inside GitHub Actions.
 
@@ -9,7 +9,7 @@ AI-powered pull request reviews, running entirely inside GitHub Actions.
 
 ```yaml
 name: PRSensei
-on:b
+on:b    
   pull_request:
     types: [opened, synchronize, reopened]
 
