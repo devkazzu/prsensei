@@ -1,4 +1,4 @@
-     # 🧘 PRSensei
+# 🧘 PRSensei
 
 AI-powered pull request reviews, running entirely inside GitHub Actions.
 
